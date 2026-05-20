@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wanght.cc</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px 40px;
+            color: #1a1a1a;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #111;
+        }
+
+        .header p {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 680px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 24px;
+            background: #fff;
+            border-radius: 14px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .card:active {
+            transform: translateY(0);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .card-body h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .card-body p {
+            font-size: 0.82rem;
+            color: #888;
+            line-height: 1.4;
+        }
+
+        .card-ride .card-icon { background: #FFF0E8; color: #FC5200; }
+        .card-kk .card-icon { background: #E8F5E9; color: #388E3C; }
+        .card-art .card-icon { background: #F3E5F5; color: #7B1FA2; }
+        .card-poi .card-icon { background: #E3F2FD; color: #1565C0; }
+        .card-download .card-icon { background: #FFF8E1; color: #F57F17; }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 0.78rem;
+            color: #bbb;
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 40px 16px 30px; }
+            .header h1 { font-size: 1.5rem; }
+            .grid { gap: 12px; }
+            .card { padding: 16px 18px; gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>wanght.cc</h1>
+        <p>骑行 · 工具 · 地图</p>
+    </div>
+
+    <div class="grid">
+        <a href="https://ride.wanght.cc" class="card card-ride">
+            <div class="card-icon">🚴</div>
+            <div class="card-body">
+                <h2>骑行足迹</h2>
+                <p>我的骑行轨迹地图</p>
+            </div>
+        </a>
+
+        <a href="https://kk.wanght.cc" class="card card-kk">
+            <div class="card-icon">🚵</div>
+            <div class="card-body">
+                <h2>KK 骑行足迹</h2>
+                <p>KK 的骑行轨迹地图</p>
+            </div>
+        </a>
+
+        <a href="https://art.wanght.cc" class="card card-art">
+            <div class="card-icon">🎨</div>
+            <div class="card-body">
+                <h2>GPS Art</h2>
+                <p>图片转骑行轨迹艺术</p>
+            </div>
+        </a>
+
+        <a href="https://poi.wanght.cc" class="card card-poi">
+            <div class="card-icon">📍</div>
+            <div class="card-body">
+                <h2>POI 工具</h2>
+                <p>发送兴趣点到 Garmin</p>
+            </div>
+        </a>
+
+        <a href="https://download.wanght.cc" class="card card-download">
+            <div class="card-icon">🗺️</div>
+            <div class="card-body">
+                <h2>地图下载</h2>
+                <p>Garmin 离线地图文件</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="footer">wanght.cc</div>
+</body>
+</html>
